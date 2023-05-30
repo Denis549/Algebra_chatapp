@@ -1,0 +1,177 @@
+@media (max-width: 768px) {
+  .home {
+    margin-top: 10%;
+    margin-bottom: 20%;
+  }
+
+  .App {
+    padding: 0 20px;
+  }
+
+
+  .App-header {
+    font-size: 20px;
+  }
+
+  .Message-content>.text {
+    max-width: 300px;
+  }
+
+  form {
+    flex-wrap: wrap;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+
+  .App-header {
+    font-size: 18px;
+  }
+
+  .Message-content>.text {
+    max-width: 250px;
+    font-size: 14px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+#root {
+  background-image: url(./Components/Slike/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home {
+  margin-top: 15%;
+  margin-bottom: 25%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.App-header {
+  background-color: #262626;
+  overflow: visible;
+  width: 100%;
+  text-align: center;
+  color: white;
+  opacity: 40%;
+}
+
+.Messages-list {
+  padding: 20px 0;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  padding-left: 0;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.Messages-message {
+  display: flex;
+  margin-top: 10px;
+}
+
+.Messages-message.currentMember {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.Message-content {
+  display: inline-block;
+}
+
+.currentMember>.Message-content {
+  align-items: flex-end;
+}
+
+.Messages-message>.avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 10px -10px;
+}
+
+.Message-content>.username {
+  display: block;
+  color: #09f563;
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+
+.Message-content>.text {
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 12px;
+  background-color: cornflowerblue;
+  color: white;
+  display: inline-block;
+}
+
+.currentMember>.Message-content .text {
+  background-color: orangered;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid rgb(255, 21, 0);
+  flex-grow: 1;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.enter {
+  font-size: 24px;
+}
