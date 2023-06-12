@@ -9,8 +9,11 @@ const Input = ({ onSendMessage }) => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        setText('');
-        onSendMessage(text);
+
+        if (text.trim() !== '') {
+            setText('');
+            onSendMessage(text);
+        }
     };
 
     return (
