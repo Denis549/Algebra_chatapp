@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+
 
 const Messages = ({ messages, currentMember }) => {
+
+    const listRef = useRef(null)
+
+    useEffect(() => {
+        if (messages.length) {
+            listRef.current.lastElementChild.scrollIntoView({ behavior: "smooth" })
+        }
+    }, [messages.length])
+
     const renderMessage = (message) => {
         const { member, text } = message;
         const messageFromMe = member.id === currentMember.id;
@@ -20,7 +30,7 @@ const Messages = ({ messages, currentMember }) => {
     };
 
     return (
-        <ul className="Messages-list">
+        <ul className="Messages-list" ref={listRef}>
             {messages.map((message, index) => (
                 <React.Fragment key={index}>
                     {renderMessage(message)}
